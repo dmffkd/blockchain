@@ -58,8 +58,8 @@
 .btnp{
 	font-style: italic;
 	font-weight: bold;
-	padding-top: 27px;
-	font-size: 24px;
+	padding-top: 25px;
+	font-size: 27px;
 }
 /* 메인끝 */
 /* 서브1 */
@@ -161,7 +161,7 @@
 .inputnb{
 	width: 150px;
 	margin-top: 20px;
-
+	margin-left: 20px;
 	height: 40px;
 	font-size: 27px;
 	text-align: center;
@@ -758,6 +758,7 @@ clear: both;}
 		background-repeat: no-repeat;
 		background-position: right;
 		background-position-y: top;
+	
 	}
 	.contentsbox{
 		width: 100%;
@@ -769,7 +770,7 @@ clear: both;}
 		padding-top: 0px;
 	}
 	.titlep{
-		font-size:54px;
+		font-size: 4.5em;
 	}
 	.countp{
 		font-size: 3.5em;
@@ -849,6 +850,7 @@ clear: both;}
 	}
 	.mob{
 		overflow-x: hidden;
+		
 	}
 	.inputbut{
 		width: 52px;
@@ -930,6 +932,7 @@ clear: both;}
 }
 /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
 @media all and (max-width:480px) {
+
 	.none{display: none;}
 	.transaction{margin-top: 30px;}
 	.wallet{
@@ -1012,7 +1015,7 @@ clear: both;}
 		margin-bottom: 0px;
 	}
 	.mob{
-		overflow-x: hidden;
+		overflow-x: hidden !important;
 	}
 	.keynumber2{
 		display: none;
@@ -1030,7 +1033,7 @@ clear: both;}
 		width: 335px;
 	}
 	.titlep{
-		font-size: 50px;
+		font-size: 3em;
 	}
 	.countp{
 		font-size: 2.5em;
@@ -1100,7 +1103,7 @@ clear: both;}
 		font-size: 24px;
 	}
 	.bod{
-		margin-top:0px;
+		margin-top:10px;
 	}
 	.setingpbox{
 		margin-bottom: 56px;

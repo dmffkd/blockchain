@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <title>결제 페이지</title>
+</head>
+
+<body>
+
+    
+
+    <section style="background-image: url(./img/Layer\ 2\ 2.png);
+background-repeat: no-repeat;
+background-position: right;
+height: auto;
+position:relative;
+background-position-y: top;">
+ <header>
+
+    <div class="logo">
+        <a href="index.html">
+            <p class="logop"><span style="font-style: italic; font-weight: bold;">@bitcoin</span> bank</p>
+        </a>
+    </div>
+
+        <ul class="header_Menu">
+            <li style="margin: 0px;" class="header_Menu_P">
+                Lorem
+            </li>
+
+            <li class="header_Menu_P">
+                Lorem
+            </li>
+
+            <li class="header_Menu_P">
+                Lorem
+            </li>
+
+            <li class="header_Menu_P">
+                Lorem
+            </li>
+
+            <li class="header_Menu_P">
+                Lorem
+            </li>
+
+        </ul>
+    </div>
+    <div class="dropdown">
+        <button onclick="myFunction();" class="dropbtn">Dropdown</button>
+      
+      </div>
+</header>
+<div id="myDropdown" class="dropdown-content">
+    <a href="index.html">Main</a>
+    <a href="indexnew.html">Card Check</a>
+    <a href="sub_4.html">FAQ</a>
+  </div>
+
+        <div class="sub_3">
+
+
+            <div class="mobilesu3">
+                <div class="Order_Summarybox">
+                    <div class="E-mailtextbox">
+                        <p class="Emailtext">Order Summary<span
+                                style="font-size: 10px; font-weight: bold; color: #2d2d2d;">(결제정보)</span></p>
+                    </div>
+                    <div class="Order_Summarycontnest">
+                        <div class="Order_Summaryimg">
+                            <img src="./img/Rectangle 76124124.png">
+
+                        </div>
+
+                        <div class="Order_Summarypbox">
+                            <p class="Order_Summaryp" style="line-height: 150%;"><span style="font-style: italic; font-weight: bold;"> bitcoin</span> card<Br>100BTC</p>
+                        </div>
+
+
+
+
+                        <div class="Order_Summarypbox2">
+
+                            <div class="Order_Summaryp2">
+                                <p>Subotal<br>Qty<br>Address<Br> <span
+                                        style="color: #2d2d2d; font-weight: bold;   line-height: 33px;">Total <span
+                                            style="font-size: 12px; font-weight: bold; color: #2d2d2d; ">(합계)</span></span>
+                                </p>
+                            </div>
+
+                            <div class="Order_Summaryp3">
+                                <p>9999원<br>1<br>-<br> <span
+                                        style="   font-weight: bold; color: #EF4234; line-height: 33px;">9999원</span>
+                                </p>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="Payment_contentsbox">
+                <div class="E-mail">
+                    <div class="E-mailtextbox">
+                        <p class="Emailtext">1.Your Email <span
+                                style="font-size: 12px; font-weight: bold; color: #2d2d2d;">(결제안내 받으실 이메일 입력)</span></p>
+                    </div>
+                    <div class="E-mailformbox">
+                        <input type="email" placeholder="E-mail" class="mobilesu3input" type="email" id="email"
+                        pattern=".+@globex\.com"  required>
+                    </div>
+
+
+                </div>
+                <div class="Shipping">
+                    <div class="E-mailtextbox" style="padding-top: 27px;">
+                        <p class="Emailtext">2. Information <span
+                                style="font-size: 12px; font-weight: bold; color: #2d2d2d;">(결제자 인적사항 입력)</span></p>
+                    </div>
+                    <div class="Shipping_content">
+                        <div class="Shipping_name">
+                            <input placeholder="Name" class="mobilesu3input">
+
+                        </div>
+                        <div class="Shipping_Address">
+                            <input placeholder="도로명" class="mobilesu3input">
+                        </div>
+                        <div class="Shipping_Address">
+                            <input placeholder="자세한주소" class="mobilesu3input">
+                        </div>
+                        <div class="Shipping_Address">
+                            <input id="card_number" placeholder="Phone" onKeyup="inputAutoNumber(this,event);"
+                                onchange="inputAutoNumber(this,event)" maxlength="19" class="mobilesu3input">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="Payment">
+                    <div class="E-mailtextbox" style="padding-top: 27px;">
+                        <p class="Emailtext">3. Payment <span
+                                style="font-size: 12px; font-weight: bold; color: #2d2d2d;">(결제방법)</span></p>
+                    </div>
+                    <div class="Payment_box">
+                        <div class="check">
+                            <input type="radio" data-id="text1" name='check' class="sxx">신용카드
+
+
+                            <input type="radio" data-id="text2" name='check' class="sxx"> 휴대전화
+
+
+                            <input type="radio" data-id="text3" name='check' class="sxx"> 가상계좌입금
+
+                        </div>
+
+                        <Div id="text1" class="Payment_card">
+                            <select class="sse">
+                                <option>카드선택</option>
+                            </select>
+                            <select class="sse" style="margin-top: 20px;">
+                                <option>일시불</option>
+                            </select>
+                        </Div>
+
+                        <Div id="text2" class="Payment_card vu">
+                            <select class="sse">
+                                <option>통신사선택</option>
+                            </select>
+                            <input placeholder="Phone" id="Phone_1" placeholder="Phone"
+                                onKeyup="inputAutoNumber(this,event);" onchange="inputAutoNumber(this,event)"
+                                maxlength="19" class="mobilesu3input2">
+
+
+                        </Div>
+
+                        <Div id="text3" class="Payment_card vu">
+                            <select class="sse">
+                                <option>입금은행선택</option>
+                            </select>
+
+
+                            <input placeholder="계좌번호 수신될핸드폰" class="mobilesu3input2">
+
+                            <input placeholder="환불받을계좌번호" class="mobilesu3input2">
+
+
+                            <p style="text-align: center; color: #EF4234; margin-top: 20px; font-size: 11px;">*발급일 기준으로
+                                3일내로 입금하셔야합니다.*</p>
+                        </Div>
+
+
+
+
+
+                    </div>
+
+
+                </div>
+
+                <div class="mobilesu3" style="padding:0px;">
+
+                <a href="#">
+                    <div class="Continuebox" id="modal_btn">
+                        <p class="Continuep">Continue <span style="font-size: 12px; font-weight: bold; ">(결제하기)</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            </div>
+
+
+            <div class="pcsu3">
+                <div class="Order_Summarybox">
+                    <div class="E-mailtextbox">
+                        <p class="Emailtext">Order Summary <span
+                                style="font-size: 12px; font-weight: bold; color: #2d2d2d; ">(결제정보)</span></p>
+                    </div>
+                    <div class="Order_Summarycontnest">
+                        <div class="Order_Summaryimg">
+                            <img src="./img/Rectangle 76124124.png">
+
+                        </div>
+
+                        <div class="Order_Summarypbox">
+                            <p class="Order_Summaryp" style="line-height: 150%;"><span style="font-style: italic; font-weight: bold; color: #2d2d2d;"> bitcoin</span> card<Br>100BTC</p>
+                        </div>
+
+
+
+
+                        <div class="Order_Summarypbox2">
+
+                            <div class="Order_Summaryp2">
+                                <p>Subotal<br>Qty<br>Address<Br> <span
+                                        style="color: #2d2d2d; font-weight: bold;   line-height: 33px;">Total
+                                    </span><span
+                                        style="font-size: 12px; font-weight: bold; color: #2d2d2d; ">(합계)</span></p>
+                            </div>
+
+                            <div class="Order_Summaryp3">
+                                <p>9999원<br>1<br>-<br> <span
+                                        style="   font-weight: bold; color: #EF4234; line-height: 33px;">9999원</span>
+                                </p>
+                            </div>
+
+              
+            
+
+
+                        </div>
+                        
+                    </div>
+                    <a href="#">
+                        <div class="Continuebox" id="modal_btn1">
+                            <p class="Continuep">Continue <span style="font-size: 12px; font-weight: bold; ">(결제하기)</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="modal_wrap">
+
+            <div class="titlebox oo">
+                <p class="sub_3_titlep" style="line-height: 50px;">Order Place<br>
+                    <span style="font-size: 24px; ">(상품주문완료)</span>
+                </p>
+            </div>
+
+
+            <div class="Order_Summarybox modal">
+                <div class="E-mailtextbox">
+                    <p class="Emailtext">Order Summary <span
+                            style="font-size: 12px; font-weight: bold; color: #2d2d2d; ">(결제 정보)</span></p>
+                </div>
+                <div class="Order_Summarycontnest">
+                    <div class="Order_Summaryimg">
+                        <img src="./img/Rectangle 76124124.png">
+
+                    </div>
+
+                    <div class="Order_Summarypbox">
+                        <p class="Order_Summaryp" style="line-height: 150%;"><span style="font-style: italic; font-weight: bold; color: #2d2d2d;"> bitcoin</span> card<Br>100BTC</p>
+                    </div>
+
+                    <div class="Order_Summarypbox2">
+
+                        <div class="Order_Summaryp2">
+                            <p>Subotal<br>Qty<br>Address<Br> <span
+                                    style="color: #2d2d2d; font-weight: bold;   line-height: 33px;">Total <span
+                                        style="font-size: 12px; font-weight: bold; color: #2d2d2d; ">(합계)</span></span>
+                            </p>
+                        </div>
+
+                        <div class="Order_Summaryp3">
+                            <p>9999원<br>1<br>-<br> <span
+                                    style="   font-weight: bold; color: #EF4234; line-height: 33px;">9999원</span></p>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <a href="./sub_4(2).html">
+                <div class="modal_qnabtn">
+                    <p class="modal_qnabtnp">상품이용방법</p>
+                </div>
+            </a>
+
+            <a href="./index.html">
+            <div class="modal_close1">
+                <p class="modal_closep">Continue</p>
+            </div>
+        </a>
+
+    </section>
+
+
+
+
+
+    <footer style="background:#2d2d2d;">
+        <hr style="border: 1px solid #fff; margin-bottom: 100px;">
+        <div class="footerwapper">
+            <div class="footerbigpbox">
+                <div class="footer_pbox">
+                    <p class="footer_Bp">Lorem</p>
+                    <hr class="footer_hr">
+                    <p class="footer_Sp">
+                        Lorem
+                    </p>
+                    <p class="footer_Sp">
+                        Lorem
+                    </p>
+                    <p class="footer_Sp">
+                        Lorem
+                    </p>
+                    <p class="footer_Sp">
+                        Lorem
+                    </p>
+                </div>
+
+                <div class="footer_pbox">
+                    <p class="footer_Bp">Lorem</p>
+                    <hr class="footer_hr">
+                    <p class="footer_Sp">
+                        Lorem
+                    </p>
+                    <p class="footer_Sp">
+                        Lorem
+                    </p>
+                    <p class="footer_Sp">
+                        Lorem
+                    </p>
+                    <p class="footer_Sp">
+                        Lorem
+                    </p>
+                </div>
+
+
+                <div class="footer_pbox">
+                    <p class="footer_Bp">Lorem</p>
+                    <hr class="footer_hr">
+                    <p class="footer_Sp">
+                        Lorem
+                    </p>
+                    <p class="footer_Sp">
+                        Lorem
+                    </p>
+                    <p class="footer_Sp">
+                        Lorem
+                    </p>
+                    <p class="footer_Sp">
+                        Lorem
+                    </p>
+                </div>
+
+
+                <div class="footer_pbox">
+                    <p class="footer_Bp">Lorem</p>
+                    <hr class="footer_hr">
+                    <p class="footer_Sp">
+                        Lorem ipsum dolor sit amet,<br>
+                        consectetur adipiscing elit. <Br>
+                        Consectetur purus ultricies nunc<br>
+                        dignissim at accumsan. <br>
+                        Nisl et sed nunc turpis varius porttitor
+                        sit. Integer
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </footer>
+
+
+
+
+
+
+</body>
+<script>
+    $(document).ready(function () {
+        $('.Payment_card').hide();
+
+        $(".sxx").click(function () {
+            $('.Payment_card').hide();
+            $('#' + $(this).data('id')).fadeIn(250)
+
+        });
+    });
+
+</script>
+
+
+<script>
+    window.onload = function () {
+
+        function onClick() {
+            document.querySelector('.modal_wrap').style.display = 'block';
+            document.querySelector('.black_bg').style.display = 'block';
+        }
+        function offClick() {
+            document.querySelector('.modal_wrap').style.display = 'none';
+            document.querySelector('.black_bg').style.display = 'none';
+
+        }
+
+        document.getElementById('modal_btn').addEventListener('click', onClick);
+        document.getElementById('modal_btn1').addEventListener('click', onClick);
+        document.querySelector('.modal_close1').addEventListener('click', offClick);
+
+    };
+</script>
+
+<script>
+    $('#Phone_1').keydown(function(event) {
+    var key = event.charCode || event.keyCode || 0;
+    $text = $(this);
+    if (key !== 8 && key !== 9) {
+        if ($text.val().length === 3) {
+            $text.val($text.val() + '-');
+        }
+        if ($text.val().length === 8) {
+            $text.val($text.val() + '-');
+        }
+    }
+ 
+    return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));          
+});
+
+
+
+</script>
+
+<script>
+    $('#card_number').keydown(function(event) {
+    var key = event.charCode || event.keyCode || 0;
+    $text = $(this);
+    if (key !== 8 && key !== 9) {
+        if ($text.val().length === 3) {
+            $text.val($text.val() + '-');
+        }
+        if ($text.val().length === 8) {
+            $text.val($text.val() + '-');
+        }
+    }
+ 
+    return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));          
+});
+
+
+
+</script>
+
+<script>
+    $('#toggle').click(function () {
+        $('#toggle .bar').toggleClass('animate');
+        $('#page').toggleClass('overlay');
+    });
+</script>
+
+
+
+<script>
+
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('header').outerHeight();
+
+    $(window).scroll(function (event) {
+        didScroll = true;
+    });
+
+    setInterval(function () {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+
+
+        if (Math.abs(lastScrollTop - st) <= delta)
+            return;
+
+
+
+        if (st > lastScrollTop && st > navbarHeight) {
+            // Scroll Down
+            $('header').removeClass('nav-down').addClass('nav-up');
+        } else {
+            // Scroll Up
+            if (st + $(window).height() < $(document).height()) {
+                $('header').removeClass('nav-up').addClass('nav-down');
+            }
+        }
+
+        lastScrollTop = st;
+    }
+</script>
+<script>
+    window.addEventListener('load', function () {
+        setTimeout(scrollTo, 0, 0, 1);
+    }, false);
+</script>
+<script>
+    $(".que").click(function() {
+   $(this).next(".anw").stop().slideToggle(300);
+  $(this).toggleClass('on').siblings().removeClass('on');
+  $(this).next(".anw").siblings(".anw").slideUp(300);
+});
+</script>
+
+<script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+
+
+
+if (!event.target.matches('.dropbtn')) {
+
+var dropdowns = document.getElementsByClassName("dropdown-content");
+var i;
+for (i = 0; i < dropdowns.length; i++) {
+var openDropdown = dropdowns[i];
+if (openDropdown.classList.contains('show')) {
+  openDropdown.classList.remove('show');
+
+}
+}
+}
+
+}
+</script>
+
+</html>

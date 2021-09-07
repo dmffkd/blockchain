@@ -10,8 +10,8 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" href="/img/favicon.ico">
     <!-- ios홈화면추가시 상단 주소창 제거 -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="apple-touch-icon" href="/img/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
 
 
@@ -36,22 +36,29 @@
         <header style="z-index: 0;">
             <div class="logo">
                 <a href="Card_wallet.html">
-                    <p class="logop"><span style="font-style: italic; font-weight: bold;">@blockchain</span> card</p>
+                    <p class="logop"><span style="font-style: italic; font-weight: bold;">@bitcoin</span> bank</p>
                 </a>
             </div>
         </header>
 
 
         <div class="contentsbox visible">
+
+
+            
+            <div class="titlebox keynumbermo">
+                <p class="titlep">bitcoin <span style="font-weight: 200; font-style: normal;">이체</span></p>
+            </div>
+
             <div class="titlebox none" >
-                <p class="titlep">blockchain <span style="font-weight: 200; font-style: normal;">card</p>
+                <p class="titlep">bitcoin <span style="font-weight: 200; font-style: normal;">card</p>
             </div>
             <div class="count bod" >
                 <p class="id" style="color: #a3a3a3;">Your Address : 3CXDushn59iAxfejBjxv92jn6iT2zS1Pti
                      </p>
             </div>
-            <div class="btn2 rqwe" style="background:#362120; cursor: auto;">
-                <p class="btnp">blockchain <span style="font-style: normal;">이체</span></p>
+            <div class="btn2 rqwe none" style="background:#362120; cursor: auto;">
+                <p class="btnp">bitcoin <span style="font-style: normal;">이체</span></p>
             </div>
 
             <div class="contentpbox">
@@ -75,16 +82,16 @@
 
                 </p>
 
-                <input class="inputnb" placeholder="금액입력" style="border-radius: 6px;" value="" id="gma"   onkeyup="printName()">
+                <input class="inputnb" placeholder="금액입력" style="border-radius: 6px;" value="" id="gma"   onkeyup="printName()"><img src="./img/Vector.png" style="width: 10px; height: 17px; margin-left: 9px;">
                 <div class="money" >
-                    <p class="moneyp">보유중인블록체인: <span value="" onclick="statusChange(this)">8,468,4124</span>입력</p>
+                    <p class="moneyp">보유중인금액: <span value="" onclick="statusChange(this)">8,468,4124</span>입력</p>
                 </div>
                 <div class="count2" style="padding-top: 10px;">
                     <p id="btc2" class="countp2"><span style="font-size: 0.5em;">USD</span></p>
                 </div>
             </div>
             <div class="btn2 rqwe" style="margin-bottom: 10px;" id="modal-open">
-                <p class="btnp">blockchain <span style="font-style: normal; font-weight: 200;">이체하기</span></p>
+                <p class="btnp">bitcoin <span style="font-style: normal; font-weight: 200;">이체하기</span></p>
             </div>
             <div class="stting" id="modal_btn">
                 <p class="moneyp" style="padding-bottom:5px;">이체 고급설정</p>
@@ -114,7 +121,7 @@
                 <div class="transfercontentsbox" style="margin-top: 20px; margin-bottom: 20px; font-size: 15px; line-height: 200%;">
                     <span style="color: #A3a3a3; font-weight: bold;">3CXDushn59iAxfejBjxv92jn6iT2zS1Pti 에서 출금</span><br>
     <span style="color: #B08B2E; font-size: 24px;">bc1q</span>d5xu6jv5zdy0vgajz3ktze3hygk9vscd6l<span style="color: #B08B2E; font-size: 24px;">ath7</span><br>
-     <span style="font-weight: bold;">Address</span>로 <span id="mao" style="font-weight: bold; color: #B08B2E;"></span> 를보냅니다
+     <span style="font-weight: bold;">Address</span>로 <span id="mao" style="font-weight: bold; color: #B08B2E;"></span>BTC 를보냅니다
                     <br>
                     <p  id="btc3" style="display: inline-block; margin-top: 10px; font-size: 24px;" > </p>
               
@@ -229,7 +236,7 @@
 
                 <div class="minerfee_hidebox" id="opNormal" >
                     <p class="minerfee_hideboxbp">Normal를 선택하셨습니다.</p>
-                    <p class="minerfee_hideboxp">수수료 : 0.086 원</p>
+                    <p class="minerfee_hideboxp">수수료 : 0.086 BTC</p>
                     <p class="minerfee_hideboxp">예상블럭 : 20개</p>
                     <p class="minerfee_hideboxp">예상 소요시간 : 20분</p>
 
@@ -238,7 +245,7 @@
 
                 <div class="minerfee_hidebox" id="opLow_Priority">
                     <p class="minerfee_hideboxbp">Low Priority를 선택하셨습니다.</p>
-                    <p class="minerfee_hideboxp">수수료 : 0.00084 원</p>
+                    <p class="minerfee_hideboxp">수수료 : 0.00084 BTC</p>
                     <p class="minerfee_hideboxp">예상블럭 : 50개</p>
                     <p class="minerfee_hideboxp">예상 소요시간 : 40분</p>
 
@@ -248,7 +255,7 @@
 
                 <div class="minerfee_hidebox" id="opEconomy">
                     <p class="minerfee_hideboxbp">Economy를 선택하셨습니다.</p>
-                    <p class="minerfee_hideboxp">수수료 : 82.6 원</p>
+                    <p class="minerfee_hideboxp">수수료 : 82.6 BTC</p>
                     <p class="minerfee_hideboxp">예상블럭 : 5개</p>
                     <p class="minerfee_hideboxp">예상 소요시간 : 8분</p>
 
@@ -257,7 +264,7 @@
 
                 <div class="minerfee_hidebox" id="opPriority">
                     <p class="minerfee_hideboxbp">Priority를 선택하셨습니다.</p>
-                    <p class="minerfee_hideboxp">수수료 : 848.6 원</p>
+                    <p class="minerfee_hideboxp">수수료 : 848.6 BTC</p>
                     <p class="minerfee_hideboxp">예상블럭 : 2개</p>
                     <p class="minerfee_hideboxp">예상 소요시간 : 4분</p>
 
