@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="common2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/0.3.6/ScrollTrigger.min.js"></script>
+    <script src="./scrollTrigger.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>카드지갑메인</title>
+</head>
+
+<body>
+   
+
+
+
+    <section class="mob">
+        <header>
+
+            <div class="logo">
+                <a href="Card_wallet.html">
+                    <p class="logop"><span style="font-style: italic; font-weight: bold;">@blockchain</span> card</p>
+                </a>
+            </div>
+        
+              
+            </div>
+        
+        </header>
+ 
+        <div class="contentsbox  visible">
+
+            <div class="titlebox">
+                <p class="titlep">blockchain <span style="font-weight: 200; font-style: normal;">card</span></p>
+            </div>
+
+            <div class="count" style="margin-top: 40px;">
+                <p class="id" style="color: #a3a3a3;">Your Address : 3CXDushn59iAxfejBjxv92jn6iT2zS1Pti
+                     </p>
+            </div>
+
+            <div class="count">
+                <p class="countp">0.003</p>
+            </div>
+            <div class="count2">
+                <p class="countp2" id="btc2"><span style="font-size: 0.5em;"></p>
+            </div>
+            <a href="Card_wallet_receive.html">
+                <div class="btn1">
+                    <p class="btnp">blockchain <span style="font-style: normal; ">수신하기</span></p>
+                </div>
+            </a>
+            <a href="Card_wallet_transfer.html">
+                <div class="btn2">
+                    <p class="btnp">blockchain <span style="font-style: normal; ">이체하기</span></p>
+                </div>
+            </a>
+            <a href="Card_wallettransactionhistory.html">
+            <div class="stting">
+                <p class="moneyp" style="padding-bottom:5px;">거래내역조회</p>
+                <div class="won">
+            
+                </div>
+            </a>
+        </div>
+       
+
+    </section>
+
+
+
+
+    <script>
+        $('#toggle').click(function () {
+            $('#toggle .bar').toggleClass('animate');
+            $('#page').toggleClass('overlay');
+        });
+    </script>
+
+
+</body>
+
+
+<script>
+    function get_price() {
+      var el = document.getElementById('btc2')
+      fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
+
+        .then(res => res.json())
+        .then(res => {
+          console.log(res);
+          var price = res.bitcoin.usd
+          el.innerHTML = "≈"+price
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    get_price()
+
+    setInterval(get_price, 10000)
+  </script>
+
+<script>
+
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('header').outerHeight();
+
+    $(window).scroll(function (event) {
+        didScroll = true;
+    });
+
+    setInterval(function () {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+
+
+        if (Math.abs(lastScrollTop - st) <= delta)
+            return;
+
+
+
+        if (st > lastScrollTop && st > navbarHeight) {
+            // Scroll Down
+            $('header').removeClass('nav-down').addClass('nav-up');
+        } else {
+            // Scroll Up
+            if (st + $(window).height() < $(document).height()) {
+                $('header').removeClass('nav-up').addClass('nav-down');
+            }
+        }
+
+        lastScrollTop = st;
+    }
+</script>
+<script>
+    window.addEventListener('load', function () {
+        setTimeout(scrollTo, 0, 0, 1);
+    }, false);
+</script>
+<script>
+    $(".que").click(function() {
+   $(this).next(".anw").stop().slideToggle(300);
+  $(this).toggleClass('on').siblings().removeClass('on');
+  $(this).next(".anw").siblings(".anw").slideUp(300);
+});
+</script>
+
+<script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+
+
+
+if (!event.target.matches('.dropbtn')) {
+
+var dropdowns = document.getElementsByClassName("dropdown-content");
+var i;
+for (i = 0; i < dropdowns.length; i++) {
+var openDropdown = dropdowns[i];
+if (openDropdown.classList.contains('show')) {
+  openDropdown.classList.remove('show');
+
+}
+}
+}
+
+}
+</script>
+
+</html>

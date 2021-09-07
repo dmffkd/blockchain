@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="common2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/0.3.6/ScrollTrigger.min.js"></script>
+    <script src="./scrollTrigger.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>카드지갑_거래내역확인</title>
+</head>
+
+<body>
+   
+
+
+
+    <section class="mob">
+        <header>
+
+            <div class="logo">
+                <a href="Card_wallet.html">
+                    <p class="logop"><span style="font-style: italic; font-weight: bold;">@blockchain</span> card</p>
+                </a>
+            </div>
+              
+              
+            </div>
+        
+        </header>
+  
+          
+        <div class="contentsbox  visible">
+   
+         
+            <div class="titlebox">
+                <p class="titlep">blockchain <span style="font-weight: 200; font-style: normal;">card</span></p>
+            </div>
+         
+          <div class="transaction" id="transaction_box">
+       
+            <div class="transaction_box">
+                <div class="testpbox">
+                    <p class="date">
+                        2021.08.02 16:33
+                    </p>
+                    <p class="price">
+                        0.01603
+                    </p>
+                
+                    <p class="bo">    IN</p>
+                    <p class="hash">f814900f6aa35ff198c507463947c90</p>
+                </div>
+                <div class="menu2">
+                  <p class="bo2">From In</p>
+                  <p class="bo3">3DyX8cAiAYVw6s42dMbNjYaaedyuUMUdLT</p>  
+                <hr class="border: 1px solid #616161;">
+                <p class="bo2">Hash</p>
+                <p class="bo3">df84a2d300730a45b2c8342fc295f2f6435dd58a23648471044716</p>  
+              <hr class="border: 1px solid #616161;">
+              <p class="bo2">Status</p>
+              <p class="bo3">Confirmed</p>  
+            <hr class="border: 1px solid #616161;">
+            <p class="bo2">Received Time</p>
+            <p class="bo3">2021.08.02 16:33</p>  
+          <hr class="border: 1px solid #616161;">
+          <p class="bo2">Size</p>
+          <p class="bo3">247 bytes</p>  
+        <hr class="border: 1px solid #616161;">
+        <p class="bo2">Weight</p>
+        <p class="bo3">661</p>  
+      <hr class="border: 1px solid #616161;">
+      <p class="bo2">Included in Block</p>
+      <p class="bo3">696465</p>  
+    <hr class="border: 1px solid #616161;">
+    <p class="bo2">Confirmations</p>
+    <p class="bo3">2</p>  
+  <hr class="border: 1px solid #616161;">
+  <p class="bo2">Total Input</p>
+  <p class="bo3">0.01603</p>  
+<hr class="border: 1px solid #616161;">
+<p class="bo2">Fees</p>
+<p class="bo3">0.00000552</p>  
+<hr class="border: 1px solid #616161;">
+<p class="bo2">Fee per byte</p>
+<p class="bo3">2.235 sat/B</p>  
+<hr class="border: 1px solid #616161;">
+<p class="bo2">Fee per vbyte</p>
+<p class="bo3">3.325 sat/vByte</p>  
+<hr class="border: 1px solid #616161;">
+<p class="bo2">Fee per weight unit</p>
+<p class="bo3">0.835 sat/WU</p>  
+<hr class="border: 1px solid #616161;">
+<p class="bo2">Value when transacted</p>
+<p class="bo3">$1,964,648.63</p>  
+<hr class="border: 1px solid #616161;">
+
+                </div>
+            </div>
+                      
+         
+          
+          
+          </div>
+       
+          <a href="Card_wallet.html">
+            <div class="btn1 back">
+                <p style="font-style: normal;" class="btnp"> 돌아가기</p>
+            </div>
+        </a>
+       
+    </section>
+
+
+
+
+    <script>
+        $('#toggle').click(function () {
+            $('#toggle .bar').toggleClass('animate');
+            $('#page').toggleClass('overlay');
+        });
+    </script>
+
+
+</body>
+
+
+
+
+
+
+<script>
+$('.transaction_box').click(function(){
+   
+   $('.testpbox').addClass('menu1cle')
+         $('.menu2').slideUp();
+         if ($(this).children('.menu2').is(':hidden')){
+            $(this).children('.menu2').slideDown();
+         } else{
+            $('.testpbox').removeClass('menu1cle')
+            $(this).children('.menu2').slideUp();
+         }
+      });
+</script>
+  
+
+
+<!--  
+ <script>
+
+
+
+function exasd() {
+      
+
+   
+        
+      fetch("https://gist.githubusercontent.com/kimsunggeun/1421121d5983076ed18c7a32d3618da0/raw/733322f6def01ae98103bce78e35b9cfd8dec8d4/coin_in.json")
+ 
+        .then(res => res.json())
+        .then(res => {
+                
+      
+
+            
+
+
+            const hash3 = document.createElement("p");
+            const time3 = document.createElement("p");
+            const price3 = document.createElement("p");
+
+            const hash4 = document.createElement("p");
+            const time4 = document.createElement("p");
+            const price4 = document.createElement("p");
+
+            const hash5 = document.createElement("p");
+            const time5 = document.createElement("p");
+            const price5 = document.createElement("p");
+
+            const hash6 = document.createElement("p");
+            const time6 = document.createElement("p");
+            const price6 = document.createElement("p");
+
+            const hash7 = document.createElement("p");
+            const time7 = document.createElement("p");
+            const price7 = document.createElement("p");
+
+            const hash8 = document.createElement("p");
+            const time8 = document.createElement("p");
+            const price8 = document.createElement("p");
+
+            const hash9 =document.createElement("p");
+            const time9 =document.createElement("p");
+            const price9 =document.createElement("p");
+
+            const hash10 =document.createElement("p");
+            const time10 =document.createElement("p");
+            const price10 =document.createElement("p");
+
+            const hash11 =document.createElement("p");
+            const time11 =document.createElement("p");
+            const price11 =document.createElement("p");
+            
+            const hash12 =document.createElement("p");
+            const time12 =document.createElement("p");
+            const price12 =document.createElement("p");
+
+
+            const hash2 = document.createElement("p");
+            const time2 = document.createElement("p");
+           const price2 = document.createElement("p");
+           const bo2 = document. createElement("p")
+
+            const hash1 = document.createElement("p");
+            const time1 = document.createElement("p");
+            const price1 = document.createElement("p");
+            const bo1 = document.createElement("p");
+
+
+            const hash =document.createElement("p");
+            const time =document.createElement("p");
+            const price =document.createElement("p");
+            const bo = document. createElement("p");
+
+            const bo3 = document. createElement("p")
+            const bo4 = document. createElement("p")
+            const bo5 = document. createElement("p")
+            const bo6 = document. createElement("p")
+            const bo7 = document. createElement("p")
+            const bo8 = document. createElement("p")
+            const bo9 = document. createElement("p")
+            const bo10 = document. createElement("p")
+            const bo11 = document. createElement("p")
+            const bo12 = document. createElement("p")
+            time2.textContent = res.out[2].time;
+            price2.textContent = res.out[2].price;
+            hash2.textContent = res.out[2].hash;
+            
+            hash.textContent = res.in[0].hash;
+            time.textContent = res.in[0].time;
+            price.textContent = res.in[0].price;
+
+            time1.textContent = res.in[1].time;
+            price1.textContent = res.in[1].price;
+            hash1.textContent = res.in[1].hash;
+
+            time3.textContent = res.out[3].time;
+            price3.textContent = res.out[3].price;
+            hash3.textContent = res.out[3].hash;
+
+
+            time4.textContent = res.in[3].time;
+            price4.textContent = res.in[3].price;
+            hash4.textContent = res.in[3].hash;
+
+            time5.textContent = res.out[4].time;
+            price5.textContent = res.out[4].price;
+            hash5.textContent = res.out[4].hash;
+
+            time6.textContent = res.in[4].time;
+            price6.textContent = res.in[4].price;
+            hash6.textContent = res.in[4].hash;
+            
+            time7.textContent = res.in[5].time;
+            price7.textContent = res.in[5].price;
+            hash7.textContent = res.in[5].hash;
+
+            time8.textContent = res.in[6].time;
+            price8.textContent = res.in[6].price;
+            hash8.textContent = res.in[6].hash;
+
+            time9.textContent = res.out[6].time;
+            price9.textContent = res.out[6].price;
+            hash9.textContent = res.out[6].hash;
+
+            time10.textContent = res.in[7].time;
+            price10.textContent = res.in[7].price;
+            hash10.textContent = res.in[7].hash;
+
+            time11.textContent = res.in[2].time;
+            price11.textContent = res.in[2].price;
+            hash11.textContent = res.in[2].hash;
+
+            time12.textContent = res.out[2].time;
+            price12.textContent = res.out[2].price;
+            hash12.textContent = res.out[2].hash;
+
+
+
+
+            bo12.textContent = "OUT"
+            
+            bo11.textContent = "IN"
+
+            bo10.textContent = "IN"
+
+            bo9.textContent = "OUT"
+            
+            bo8.textContent = "IN" 
+
+            bo7.textContent = "IN"
+            
+            bo6.textContent = "IN" 
+
+            bo5.textContent = "OUT"
+            
+            bo4.textContent = "IN" 
+
+            bo3.textContent = "OUT"
+            bo2.textContent = "OUT"
+            bo1.textContent = "IN"
+            bo.textContent = "IN" 
+
+   
+            hash12.classList.add("hash");
+            price12.classList.add("price");
+            time12.classList.add("date");
+            
+            hash11.classList.add("hash");
+            price11.classList.add("price");
+            time11.classList.add("date");
+
+            hash10.classList.add("hash");
+            price10.classList.add("price");
+            time10.classList.add("date");
+
+            hash9.classList.add("hash");
+            price9.classList.add("price");
+            time9.classList.add("date");
+
+            hash8.classList.add("hash");
+            price8.classList.add("price");
+            time8.classList.add("date");
+
+            hash7.classList.add("hash");
+            price7.classList.add("price");
+            time7.classList.add("date");
+
+
+            hash6.classList.add("hash");
+            price6.classList.add("price");
+            time6.classList.add("date");
+
+            hash5.classList.add("hash");
+            price5.classList.add("price");
+            time5.classList.add("date");
+
+            
+            hash4.classList.add("hash");
+            price4.classList.add("price");
+            time4.classList.add("date");
+
+            hash3.classList.add("hash");
+            price3.classList.add("price");
+            time3.classList.add("date");
+             hash2.classList.add("hash");
+             price2.classList.add("price");
+             time2.classList.add("date");
+
+            hash1.classList.add("hash");
+            price1.classList.add("price");
+            time1.classList.add("date");
+            bo2.classList.add("bo")
+            bo1.classList.add("bo")
+            bo.classList.add("bo")
+            hash.classList.add("hash");
+            price.classList.add("price");
+            time.classList.add("date");
+
+
+             bo12.classList.add("bo")
+            bo11.classList.add("bo")
+            bo10.classList.add("bo")
+            bo9.classList.add("bo")
+            bo8.classList.add("bo")
+            bo7.classList.add("bo")
+            bo6.classList.add("bo")
+            bo5.classList.add("bo")
+            bo4.classList.add("bo")
+            bo3.classList.add("bo")
+            bo2.classList.add("bo")          
+            
+            
+
+         const input12 = document.createElement("div")
+        const input11 = document.createElement("div")
+        const input10 = document.createElement("div")
+        const input9 = document.createElement("div")
+        const input8 = document.createElement("div")
+         const input7 = document.createElement("div")
+        const input6 = document.createElement("div")
+        const input5 = document.createElement("div")
+         const input4 = document.createElement("div")    
+        const input3 = document.createElement("div")
+        const input2 = document.createElement("div")
+        const input1 = document.createElement("div")
+        const input = document.getElementById("transaction_box")
+        const userInfo = document.createElement("div")
+        
+        input.appendChild(userInfo);
+         userInfo.appendChild(time);
+         userInfo.appendChild(price);
+         userInfo.appendChild(bo);
+         userInfo.appendChild(hash);
+         userInfo.classList.add("transaction_box")
+
+         input.appendChild(input1) 
+         input1.appendChild(time1)
+;                                                                                           
+         input1.appendChild(price1);
+         input1.appendChild(bo1);
+         input1.appendChild(hash1);
+         input1.classList.add("transaction_box")
+
+         input.appendChild (input2)
+         input2.appendChild(time2);
+         input2.appendChild(price2);
+         input2.appendChild(bo2);
+         input2.appendChild(hash2);
+         input2.classList.add("transaction_box")
+
+          input.appendChild (input3)
+         input3.appendChild(time3);
+         input3.appendChild(price3);
+         input3.appendChild(bo3);
+         input3.appendChild(hash3);
+         input3.classList.add("transaction_box")
+
+         input.appendChild (input4)
+         input4.appendChild(time4);
+         input4.appendChild(price4);
+         input4.appendChild(bo4);
+         input4.appendChild(hash4);
+         input4.classList.add("transaction_box")
+
+         input.appendChild (input5)
+         input5.appendChild(time5);
+         input5.appendChild(price5);
+         input5.appendChild(bo5);
+         input5.appendChild(hash5);
+         input5.classList.add("transaction_box")
+
+
+         input.appendChild (input6)
+         input6.appendChild(time6);
+         input6.appendChild(price6);
+         input6.appendChild(bo6);
+         input6.appendChild(hash6);
+         input6.classList.add("transaction_box")
+
+         input.appendChild (input7)
+         input7.appendChild(time7);
+         input7.appendChild(price7);
+         input7.appendChild(bo7);
+         input7.appendChild(hash7);
+         input7.classList.add("transaction_box")
+
+         input.appendChild (input8)
+         input8.appendChild(time8);
+         input8.appendChild(price8);
+         input8.appendChild(bo8);
+         input8.appendChild(hash8);
+         input8.classList.add("transaction_box")
+
+         input.appendChild (input9)
+         input9.appendChild(time9);
+         input9.appendChild(price9);
+         input9.appendChild(bo9);
+         input9.appendChild(hash9);
+         input9.classList.add("transaction_box")
+
+         input.appendChild (input9)
+         input9.appendChild(time9);
+         input9.appendChild(price9);
+         input9.appendChild(bo9);
+         input9.appendChild(hash9);
+         input9.classList.add("transaction_box")
+
+         input.appendChild (input10)
+         input10.appendChild(time10);
+         input10.appendChild(price10);
+         input10.appendChild(bo10);
+         input10.appendChild(hash10);
+         input10.classList.add("transaction_box")
+
+         input.appendChild (input11)
+         input11.appendChild(time11);
+         input11.appendChild(price11);
+         input11.appendChild(bo11);
+         input11.appendChild(hash11);
+         input11.classList.add("transaction_box")
+
+         input.appendChild (input12)
+         input12.appendChild(time12);
+         input12.appendChild(price12);
+         input12.appendChild(bo12);
+         input12.appendChild(hash12);
+         input12.classList.add("transaction_box")
+
+
+
+         var acc = document.getElementsByClassName("transaction_box")
+            var i
+
+            for(i=0; i < acc.length; i++ ){
+              
+               
+              }
+
+
+        })
+      
+    
+        .catch(err => {
+         
+        });
+    }
+ 
+    
+ 
+    exasd() 
+ 
+  </script> 
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script>
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('header').outerHeight();
+
+    $(window).scroll(function (event) {
+        didScroll = true;
+    });
+
+    setInterval(function () {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+
+
+        if (Math.abs(lastScrollTop - st) <= delta)
+            return;
+
+
+
+        if (st > lastScrollTop && st > navbarHeight) {
+            // Scroll Down
+            $('header').removeClass('nav-down').addClass('nav-up');
+        } else {
+            // Scroll Up
+            if (st + $(window).height() < $(document).height()) {
+                $('header').removeClass('nav-up').addClass('nav-down');
+            }
+        }
+
+        lastScrollTop = st;
+    }
+</script>
+<script>
+    window.addEventListener('load', function () {
+        setTimeout(scrollTo, 0, 0, 1);
+    }, false);
+</script>
+<script>
+    $(".que").click(function() {
+   $(this).next(".anw").stop().slideToggle(300);
+  $(this).toggleClass('on').siblings().removeClass('on');
+  $(this).next(".anw").siblings(".anw").slideUp(300);
+});
+</script>
+
+<script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+
+
+
+if (!event.target.matches('.dropbtn')) {
+
+var dropdowns = document.getElementsByClassName("dropdown-content");
+var i;
+for (i = 0; i < dropdowns.length; i++) {
+var openDropdown = dropdowns[i];
+if (openDropdown.classList.contains('show')) {
+  openDropdown.classList.remove('show');
+
+}
+}
+}
+
+}
+</script>
+
+</html>
